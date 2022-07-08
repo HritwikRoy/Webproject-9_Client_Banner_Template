@@ -1,0 +1,566 @@
+@import url('https://fonts.googleapis.com/css?family=Noto+Sans+TC:100,300,400,500,700,900&display=swap');
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+    color: inherit;
+    list-style: none;
+}
+
+* {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+html {
+    font-size: 62.5%;
+}
+
+
+/* reusable component */
+
+i {
+    font-size: 4.4rem;
+}
+
+p {
+    line-height: 3rem;
+}
+
+h6 {
+    font-size: 1.8rem;
+    text-transform: capitalize;
+}
+
+h2 {
+    font-size: 4.3rem;
+    padding-bottom: 3rem;
+}
+
+h3 {
+    font-size: 2.3rem;
+}
+
+p {
+    font-size: 1.8rem;
+}
+
+button {
+    width: 15rem;
+    height: 4.5rem;
+    border-radius: .8rem;
+}
+
+.row {
+    max-width: 114.8rem;
+    margin: auto;
+}
+
+
+/* end */
+
+html,
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Noto Sans TC', sans-serif;
+}
+
+header {
+    background-color: rgb(228, 212, 212);
+}
+
+.nav {
+    height: 11rem;
+}
+
+.nav img {
+    width: 9rem;
+    float: left;
+    margin-top: 1.5rem;
+}
+
+.nav nav {
+    float: right;
+}
+
+.home {
+    background-color: #b3b3ff;
+    border-radius: 0.5rem;
+    box-shadow: .2rem .3rem .4rem rgb(95, 105, 5);
+}
+
+.home:hover {
+    color: rgb(17, 17, 17);
+}
+
+nav ul li {
+    list-style-type: none;
+    display: inline-block;
+    margin: 4.1rem 0rem;
+}
+
+nav ul li a {
+    font-size: 2rem;
+    padding: .7rem 1.5rem;
+    text-decoration: none;
+    text-transform: capitalize;
+    color: rgb(12, 12, 12);
+}
+
+nav ul li a:hover {
+    background-color: #b3b3ff;
+    border-radius: 0.5rem;
+    box-shadow: .2rem .3rem .4rem rgb(95, 105, 5);
+    transition: .37s;
+}
+
+
+/* mobile-nav*/
+
+.mobile-menu span {
+    color: rgb(3, 3, 3);
+    font-size: 4rem;
+    float: right;
+    margin-top: 3.5rem;
+    margin-right: 2rem;
+    display: none;
+}
+
+.mobile-menu span:hover {
+    cursor: pointer;
+}
+
+.overlay {
+    width: 0%;
+    height: 100%;
+    position: fixed;
+    left: 0;
+    top: 0;
+    background-color: rgba(0, 0, 0, 1);
+    z-index: 10;
+    overflow-x: hidden;
+    transition: .5s;
+}
+
+.overlay-content {
+    position: relative;
+    top: 5%;
+    width: 100%;
+    text-align: center;
+}
+
+.overlay a {
+    text-decoration: none;
+    display: block;
+    font-size: 6rem;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    color: #999;
+    padding: 3rem 0;
+}
+
+.overlay a:hover {
+    color: #fff;
+}
+
+.closebtn {
+    position: absolute;
+    top: -3rem;
+    right: 4.5rem;
+    font-size: 6rem;
+}
+
+
+/* start splash */
+
+.splash {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: url('img/pexels-ylanite-koppens-1906607.jpg'), url("img/skill-bg.jpg");
+    z-index: 200;
+    color: #ffffff;
+    font-size: 30px;
+    text-align: center;
+    line-height: 90vh;
+}
+
+.splash.display-none {
+    position: fixed;
+    opacity: 0;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgb(0, 0, 0);
+    z-index: -10;
+    color: #e4e4e4;
+    font-size: 30px;
+    text-align: center;
+    line-height: 90vh;
+    transition: all 0.5s;
+}
+
+@keyframes fadeIn {
+    to {
+        opacity: 1;
+    }
+}
+
+.fade-in {
+    font-size: 6rem;
+    opacity: 0;
+    color: black;
+    animation: fadeIn 1s ease-in-out forwards;
+}
+
+
+/* end splash */
+
+img {
+    width: 100%;
+    vertical-align: middle;
+}
+
+a {
+    text-decoration: none;
+}
+
+main {
+    display: block;
+    /*max-width: 1300px;*/
+    margin: 0 auto;
+}
+
+#app {
+    width: 100%;
+    padding-top: 54.167%;
+    position: relative;
+    overflow: hidden;
+    background-color: #000;
+}
+
+.progress {
+    width: 0;
+    height: 5px;
+    background-color: #f0ad30;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 9;
+    transition: 1s;
+}
+
+.card {
+    width: 150px;
+    height: 200px;
+    position: absolute;
+    bottom: 50px;
+    border-radius: 10px;
+    background-position: center;
+    background-size: cover;
+    box-shadow: 5px 10px 20px 0px rgba(0, 0, 0, 0.8);
+    transition: 2s;
+}
+
+.card:nth-child(2) {
+    background-image: url('https://picsum.photos/1200/650?random=2');
+    z-index: 4;
+}
+
+.card:nth-child(3) {
+    background-image: url('https://picsum.photos/1200/650?random=3');
+    z-index: 4;
+}
+
+.card:nth-child(4) {
+    background-image: url('https://picsum.photos/1200/650?random=4');
+    z-index: 4;
+}
+
+.card:nth-child(5) {
+    background-image: url('https://picsum.photos/1200/650?random=5');
+    z-index: 4;
+}
+
+.card:nth-child(6) {
+    background-image: url('https://picsum.photos/1200/650?random=6');
+    z-index: 4;
+}
+
+.card:nth-child(7) {
+    background-image: url('https://picsum.photos/1200/650?random=7');
+    z-index: 4;
+}
+
+.card[data-index='1'] {
+    left: 740px;
+}
+
+.card[data-index='2'] {
+    left: 910px;
+}
+
+.card[data-index='3'] {
+    left: 1080px;
+}
+
+.card[data-index='4'] {
+    left: 1250px;
+}
+
+.card h3 {
+    margin: 0;
+    position: absolute;
+    left: 8%;
+    bottom: 8%;
+    font-size: 3rem;
+    line-height: 1.5;
+    letter-spacing: 1px;
+    color: #fff;
+    opacity: 0;
+    transition: 0.5s;
+    text-shadow: black 5px 5px 2px;
+}
+
+.card[data-index='0'],
+.card[data-index='5'] {
+    width: 100%;
+    height: 100%;
+    bottom: 0;
+    left: 0;
+    border-radius: 0;
+    box-shadow: none;
+    z-index: 2;
+}
+
+.card[data-index='5'],
+.card[data-index='4'] {
+    opacity: 0;
+    z-index: 1;
+}
+
+.card[data-index='1'] {
+    z-index: 3;
+}
+
+
+/* work-section */
+
+.work-section {
+    width: 100%;
+    padding-top: 15rem;
+    padding-bottom: 15rem;
+    display: inline-block;
+    background: linear-gradient(rgba(210, 211, 206, 0.616), rgba(192, 192, 185, 0.582)), url("img/skill-bg.jpg");
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center top;
+}
+
+.hero-section h2 {
+    color: rgb(10, 10, 10);
+    padding-bottom: 2px;
+}
+
+.hero-section p {
+    font-size: 1.5rem;
+}
+
+
+/* business-section*/
+
+.business-section {
+    padding-top: 7rem;
+    padding-bottom: 3rem;
+}
+
+.bus1 {
+    padding: 5.8rem 1rem;
+    border-radius: 1rem;
+    box-shadow: .2rem .2rem 1rem rgb(39, 37, 39);
+    width: 30%;
+    height: 40%;
+    border: 2px solid #b3b3ff;
+    text-align: center;
+    float: left;
+    margin-right: 4.5rem;
+    margin-left: 1.5rem;
+}
+
+.bus2 {
+    border-radius: 1rem;
+    box-shadow: .2rem .2rem 1rem rgb(39, 37, 39);
+    padding: 4.2rem 1rem;
+    width: 30%;
+    border: 2px solid #b3b3ff;
+    text-align: center;
+    float: left;
+    margin-right: 3rem;
+}
+
+.bus3 {
+    border-radius: 1rem;
+    box-shadow: .2rem .2rem 1rem rgb(39, 37, 39);
+    padding: 4.2rem 1rem;
+    width: 30%;
+    border: 2px solid #b3b3ff;
+    text-align: center;
+    float: right;
+    margin-right: 1.5rem;
+}
+
+.bus1:hover,
+.bus2:hover,
+.bus3:hover {
+    /* color: #b3b3ff; */
+    background: wheat;
+    transition: .5s;
+}
+
+.all p {
+    line-height: 4rem;
+}
+
+.btn {
+    padding-top: 47rem;
+    text-align: center;
+}
+
+.btn a {
+    box-shadow: .2rem .2rem 1rem rgb(39, 37, 39);
+    padding: 1.7rem 3rem 1.7rem 3rem;
+    font-size: 2rem;
+    border: .2rem solid rgb(12, 12, 12);
+    border-radius: 3rem;
+}
+
+.btn a:hover {
+    background-color: #b3b3ff; 
+    color: black;
+    transition: .5s;
+}
+
+.experience {
+    padding-top: 7rem;
+}
+
+.exp1,
+.exp2,
+.exp3 {
+    width: 32%;
+    float: left;
+    text-align: center;
+    padding-left: 10rem;
+}
+
+.exp1 {
+    float: left;
+}
+
+.exp1 h3,
+.exp2 h3,
+.exp3 h3 {
+    color: #b3b3ff;
+}
+
+.exp1 h3:hover,
+.exp2 h3:hover,
+.exp3 h3:hover {
+    color: rgb(1, 1, 2);
+}
+
+
+/* work2-section */
+
+.work2-section {
+    margin-top: 7rem;
+    width: 100%;
+    padding-top: 15rem;
+    padding-bottom: 15rem;
+    display: inline-block;
+    background: linear-gradient(rgba(6, 99, 240, 0.616), rgba(9, 101, 221, 0.582)), url("img/team-bg.jpg");
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center top;
+}
+
+
+/* about-section */
+
+.about-section {
+    padding-top: 7rem;
+    padding-bottom: 5rem;
+    text-align: center;
+}
+
+.para p {
+    padding-bottom: 8rem;
+}
+
+.para a {
+    box-shadow: .2rem .2rem 1rem rgb(39, 37, 39);
+    padding: 1.7rem 3rem 1.7rem 3rem;
+    font-size: 2rem;
+    border: .2rem solid rgb(12, 12, 12);
+    border-radius: 3rem;
+}
+
+.para a:hover {
+    background-color: #b3b3ff;
+    color: black;
+    transition: .5s;
+}
+
+.hero-section,
+.para-section {
+    padding-left: 3rem;
+}
+
+
+/* team */
+
+
+/* work3-section */
+
+.work3-section {
+    margin-top: 3rem;
+    width: 100%;
+    padding-top: 15rem;
+    padding-bottom: 15rem;
+    display: inline-block;
+    background: linear-gradient(rgba(208, 210, 66, 0.338), rgba(210, 218, 110, 0.782)), url("img/pexels-ylanite-koppens-1906607.jpg");
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center top;
+}
+
+.section {
+    background-color: rgb(204, 204, 203);
+    padding-bottom: 15rem;
+    padding-top: 15rem;
+    text-align: center;
+}
+
+
+/*  footer  section */
+
+.footer-section {
+    background: #1d1c1c;
+    padding: 3rem 0;
+    text-align: right;
+    border-top: .2rem solid #1b3b46;
+}
+
+.footer-section p {
+    text-align: center;
+    color: #fff
+}

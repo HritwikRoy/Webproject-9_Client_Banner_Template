@@ -1,0 +1,79 @@
+/* mobile menu */
+
+@media only screen and (max-width: 82rem) {
+    html {
+        font-size: 47%;
+    }
+}
+
+@media screen and (max-width:783px) {
+    html {
+        font-size: 46%;
+    }
+}
+
+@media screen and (max-width:773px) {
+    nav {
+        display: none;
+    }
+    .mobile-menu span {
+        display: block;
+    }
+    html {
+        font-size: 45%;
+    }
+}
+
+@media screen and (max-width:768px) {
+    .fade-in {
+        font-size: 4rem;
+    }
+}
+
+@media screen and (max-width:755px) {
+    html {
+        font-size: 42%;
+    }
+}
+
+@media screen and (max-width:705px) {
+    html {
+        font-size: 39%;
+    }
+}
+
+@media screen and (max-width:654px) {
+    html {
+        font-size: 40%;
+    }
+}
+
+@media only screen and (max-width: 41.2rem) {
+    html {
+        font-size: 25%;
+    }
+    p {
+        font-size: 2.5rem;
+    }
+}
+
+@media only screen and (max-width: 34.8rem) {
+    html {
+        font-size: 20%;
+    }
+    p {
+        font-size: 2.5rem;
+    }
+    .bus1 {
+        clear: both;
+    }
+}
+
+@media only screen and (max-width: 27.2rem) {
+    html {
+        font-size: 16%;
+    }
+}
+
+
+/* end mobile nav */
